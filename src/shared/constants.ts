@@ -67,4 +67,4 @@ export enum DownloadError {
   NotCachedOnHydra = "download_error_not_cached_on_hydra",
 }
 
-export const FILE_EXTENSIONS_TO_EXTRACT = [".rar", ".zip", ".7z"];
+export const FILE_EXTENSIONS_TO_EXTRACT = [".rar", ".zip", ".7z", ".tar"];
