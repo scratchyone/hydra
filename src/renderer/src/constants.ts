@@ -15,6 +15,7 @@ export const DOWNLOADER_NAME = {
   [Downloader.TorBox]: "TorBox",
   [Downloader.Hydra]: "Nimbus",
   [Downloader.VikingFile]: "VikingFile",
+  [Downloader.HTTP]: "Direct Download",
 };
 
 export const MAX_MINUTES_TO_SHOW_IN_PLAYTIME = 120;

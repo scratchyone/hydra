@@ -140,6 +140,11 @@ export const getDownloadersForUri = (uri: string) => {
     ];
   }
 
+  // Fallback: if it's a direct HTTP/HTTPS URL, use generic HTTP downloader
+  if (uri.startsWith("http://") || uri.startsWith("https://")) {
+    return [Downloader.HTTP];
+  }
+
   return [];
 };
 
