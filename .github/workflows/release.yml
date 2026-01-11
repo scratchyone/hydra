@@ -90,6 +90,7 @@ jobs:
           path: |
             dist/win-unpacked/**
             dist/*-portable.exe
+            dist/*-setup.exe
             dist/*.zip
             dist/*.dmg
             dist/*.deb

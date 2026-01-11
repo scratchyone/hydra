@@ -537,6 +537,17 @@ export class DownloadManager {
           throw error;
         }
       }
+      case Downloader.HTTP: {
+        logger.log(
+          `[DownloadManager] Processing direct HTTP download for URI: ${download.uri}`
+        );
+        return this.createDownloadPayload(
+          download.uri,
+          download.uri,
+          downloadId,
+          download.downloadPath
+        );
+      }
     }
   }
 

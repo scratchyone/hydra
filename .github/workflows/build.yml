@@ -101,6 +101,7 @@ jobs:
           name: Build-${{ matrix.os }}
           path: |
             dist/*-portable.exe
+            dist/*-setup.exe
             dist/*.zip
             dist/*.dmg
             dist/*.deb

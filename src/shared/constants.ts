@@ -11,6 +11,7 @@ export enum Downloader {
   Buzzheavier,
   FuckingFast,
   VikingFile,
+  HTTP,
 }
 
 export enum DownloadSourceStatus {
