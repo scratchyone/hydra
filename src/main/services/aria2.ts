@@ -21,6 +21,10 @@ export class Aria2 {
         "--rpc-listen-all",
         "--file-allocation=none",
         "--allow-overwrite=true",
+        "--max-connection-per-server=16",
+        "--split=16",
+        "--min-split-size=1M",
+        "--max-overall-download-limit=0",
       ],
       { stdio: "inherit", windowsHide: true }
     );
