@@ -18,11 +18,11 @@ import { loadState } from "./main";
 
 const { autoUpdater } = updater;
 
-autoUpdater.setFeedURL({
-  provider: "github",
-  owner: "hydralauncher",
-  repo: "hydra",
-});
+// autoUpdater.setFeedURL({
+//   provider: "github",
+//   owner: "hydralauncher",
+//   repo: "hydra",
+// });
 
 autoUpdater.logger = logger;
 

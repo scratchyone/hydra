@@ -32,9 +32,9 @@ export function AutoUpdateSubHeader() {
       }
     );
 
-    window.electron.checkForUpdates().then((isAutoInstallAvailable) => {
-      setIsAutoInstallAvailable(isAutoInstallAvailable);
-    });
+    // window.electron.checkForUpdates().then((isAutoInstallAvailable) => {
+    //   setIsAutoInstallAvailable(isAutoInstallAvailable);
+    // });
 
     return () => {
       unsubscribe();

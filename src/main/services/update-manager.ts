@@ -45,32 +45,35 @@ export class UpdateManager {
   }
 
   public static async checkForUpdates() {
-    autoUpdater
-      .once("update-available", (info: UpdateInfo) => {
-        this.sendEvent({ type: "update-available", info });
-        this.newVersion = info.version;
-      })
-      .once("update-downloaded", () => {
-        this.sendEvent({ type: "update-downloaded" });
+    // Auto-update disabled
+    return false;
 
-        if (!this.hasNotified) {
-          this.hasNotified = true;
-          publishNotificationUpdateReadyToInstall(this.newVersion);
-        }
-      });
+    // autoUpdater
+    //   .once("update-available", (info: UpdateInfo) => {
+    //     this.sendEvent({ type: "update-available", info });
+    //     this.newVersion = info.version;
+    //   })
+    //   .once("update-downloaded", () => {
+    //     this.sendEvent({ type: "update-downloaded" });
 
-    const isAutoInstallAvailable = await this.isAutoInstallEnabled();
+    //     if (!this.hasNotified) {
+    //       this.hasNotified = true;
+    //       publishNotificationUpdateReadyToInstall(this.newVersion);
+    //     }
+    //   });
 
-    if (app.isPackaged) {
-      autoUpdater.autoDownload = isAutoInstallAvailable;
-      autoUpdater.checkForUpdates().then((result) => {
-        logger.log(`Check for updates result: ${result}`);
-      });
-    } else if (sendEventsForDebug) {
-      this.mockValuesForDebug();
-    }
+    // const isAutoInstallAvailable = await this.isAutoInstallEnabled();
 
-    return isAutoInstallAvailable;
+    // if (app.isPackaged) {
+    //   autoUpdater.autoDownload = isAutoInstallAvailable;
+    //   autoUpdater.checkForUpdates().then((result) => {
+    //     logger.log(`Check for updates result: ${result}`);
+    //   });
+    // } else if (sendEventsForDebug) {
+    //   this.mockValuesForDebug();
+    // }
+
+    // return isAutoInstallAvailable;
   }
 
   public static checkForUpdatePeriodically() {

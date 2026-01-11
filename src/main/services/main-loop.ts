@@ -13,7 +13,7 @@ export const startMainLoop = async () => {
       DownloadManager.watchDownloads(),
       AchievementWatcherManager.watchAchievements(),
       DownloadManager.getSeedStatus(),
-      UpdateManager.checkForUpdatePeriodically(),
+      // UpdateManager.checkForUpdatePeriodically(),
     ]);
 
     await sleep(MAIN_LOOP_INTERVAL);
